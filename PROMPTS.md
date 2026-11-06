@@ -41,6 +41,13 @@ The challenge asks for dated, truthful entries about AI use. Do not submit inven
 - **What I changed instead:** I logged in using the viewer account and opened a document with Read permission.
 - **How I verified it:** The document page did not show Edit or Replace Document options.
 - **Commit:** https://github.com/srivallikakolluri-beep/TrustVault/commit/12027bd
+### 2026-11-06 — Unauthorized document access test
+
+- **Prompt / fair summary:** I asked AI how to test whether a viewer without permission could access a document.
+- **What it produced:** Step-by-step instructions for testing document visibility after permission revocation.
+- **What was wrong or incomplete:** The document initially appeared because the viewer still had Read permission.
+- **What I changed instead:** I logged in as admin and revoked the viewer's Read permission.
+- **How I verified it:** I logged in as viewer again. The dashboard displayed "No documents yet", and the document was no longer visible.
 ## Required focus
 At least two entries should discuss authorization, access control or audit integrity. Examples of checks you can perform and then document truthfully:
 - Try to download a document as a user without a grant.
