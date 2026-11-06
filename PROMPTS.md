@@ -33,7 +33,13 @@ The challenge asks for dated, truthful entries about AI use. Do not submit inven
 - **What I changed instead:** I logged in as admin and inspected the audit activity records.
 - **How I verified it:** The page displayed "Hash chain verified" and showed LOGIN, UPLOAD, GRANT, REVOKE, VIEW and DOWNLOAD events.
 - Commit URL: https://github.com/srivallikakolluri-beep/TrustVault/commit/89d90ef
+### 2026-11-06 — Read-only permission test
 
+- **Prompt / fair summary:** I asked AI how to verify that a viewer with Read-only permission cannot edit or replace a document.
+- **What it produced:** Instructions for testing the viewer account and checking the document page.
+- **What was wrong or incomplete:** I needed to confirm that edit and replace options were unavailable to a viewer.
+- **What I changed instead:** I logged in using the viewer account and opened a document with Read permission.
+- **How I verified it:** The document page did not show Edit or Replace Document options.
 ## Required focus
 At least two entries should discuss authorization, access control or audit integrity. Examples of checks you can perform and then document truthfully:
 - Try to download a document as a user without a grant.
