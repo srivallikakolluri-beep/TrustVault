@@ -10,6 +10,13 @@ The challenge asks for dated, truthful entries about AI use. Do not submit inven
 - **What was wrong or incomplete:** [Specific issue you found, or "No issue found after these checks" with evidence]
 - **What I changed instead:** [Your correction and the commit URL]
 - **How I verified it:** [Test name, manual steps, output]
+### 2026-11-06 — Viewer access and permission revocation
+
+- **Prompt / fair summary:** I asked AI to help me understand and test document access permissions for different user roles.
+- **What it produced:** Guidance for testing Read, Edit and Revoke permissions.
+- **What was wrong or incomplete:** I needed to verify that revoked users could no longer access the document.
+- **What I changed instead:** I tested the viewer account after revoking its permission.
+- **How I verified it:** After revocation, the viewer dashboard displayed "No documents yet". After granting Read access again, the viewer could see and open the document.
 ### 2026-11-06 — TrustVault setup and testing
 - **Prompt / fair summary:** I asked AI to guide me step by step through setting up and running the TrustVault Flask project on Windows 11.
 - **What it produced:** Installation instructions, terminal commands, and guidance for running the Flask application.
