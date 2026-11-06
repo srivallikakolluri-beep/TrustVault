@@ -48,6 +48,7 @@ The challenge asks for dated, truthful entries about AI use. Do not submit inven
 - **What was wrong or incomplete:** The document initially appeared because the viewer still had Read permission.
 - **What I changed instead:** I logged in as admin and revoked the viewer's Read permission.
 - **How I verified it:** I logged in as viewer again. The dashboard displayed "No documents yet", and the document was no longer visible.
+- **Commit:** https://github.com/srivallikakolluri-beep/TrustVault/commit/15d6982
 ## Required focus
 At least two entries should discuss authorization, access control or audit integrity. Examples of checks you can perform and then document truthfully:
 - Try to download a document as a user without a grant.
