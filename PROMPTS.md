@@ -32,6 +32,7 @@ The challenge asks for dated, truthful entries about AI use. Do not submit inven
 - **What was wrong or incomplete:** I needed to confirm that actual user actions were recorded and that the hash chain verification passed.
 - **What I changed instead:** I logged in as admin and inspected the audit activity records.
 - **How I verified it:** The page displayed "Hash chain verified" and showed LOGIN, UPLOAD, GRANT, REVOKE, VIEW and DOWNLOAD events.
+- Commit URL: https://github.com/srivallikakolluri-beep/TrustVault/commit/89d90ef
 
 ## Required focus
 At least two entries should discuss authorization, access control or audit integrity. Examples of checks you can perform and then document truthfully:
