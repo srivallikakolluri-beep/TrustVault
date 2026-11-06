@@ -10,7 +10,12 @@ The challenge asks for dated, truthful entries about AI use. Do not submit inven
 - **What was wrong or incomplete:** [Specific issue you found, or "No issue found after these checks" with evidence]
 - **What I changed instead:** [Your correction and the commit URL]
 - **How I verified it:** [Test name, manual steps, output]
-
+### 2026-11-06 — TrustVault setup and testing
+- **Prompt / fair summary:** I asked AI to guide me step by step through setting up and running the TrustVault Flask project on Windows 11.
+- **What it produced:** Installation instructions, terminal commands, and guidance for running the Flask application.
+- **What was wrong or incomplete:** The initial pytest command failed with `ModuleNotFoundError: No module named 'app'`.
+- **What I changed instead:** I changed the test command from pytest -q to python -m pytest -q. No application code change was needed.
+- **How I verified it:** The Flask application started successfully, and all 5 tests passed.
 ## Required focus
 At least two entries should discuss authorization, access control or audit integrity. Examples of checks you can perform and then document truthfully:
 - Try to download a document as a user without a grant.
