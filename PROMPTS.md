@@ -40,6 +40,7 @@ The challenge asks for dated, truthful entries about AI use. Do not submit inven
 - **What was wrong or incomplete:** I needed to confirm that edit and replace options were unavailable to a viewer.
 - **What I changed instead:** I logged in using the viewer account and opened a document with Read permission.
 - **How I verified it:** The document page did not show Edit or Replace Document options.
+- **Commit:** https://github.com/srivallikakolluri-beep/TrustVault/commit/12027bd
 ## Required focus
 At least two entries should discuss authorization, access control or audit integrity. Examples of checks you can perform and then document truthfully:
 - Try to download a document as a user without a grant.
