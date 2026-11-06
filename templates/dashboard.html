@@ -1,0 +1,11 @@
+{% extends "base.html" %}{% block content %}<h1>Dashboard</h1>
+{% if me.role in ['owner','admin'] %}<section class="panel"><h2>Upload document</h2><form method="post" action="{{ url_for('upload') }}" enctype="multipart/form-data">
+<input type="hidden" name="_csrf" value="{{ csrf_token() }}"><label>File (PDF, TXT, PNG, JPG, DOCX; max 10 MB)</label><input type="file" name="file" required>
+<label>Category</label><input name="category" placeholder="Contracts, HR, Finance..."><button class="primary">Upload</button></form></section>{% endif %}
+<section class="panel"><h2>Search documents</h2><form method="get" action="{{ url_for('search') }}" class="inline"><input name="q" placeholder="Document name"><button>Search</button></form></section>
+<section class="panel"><h2>{% if me.role == 'admin' %}All document records{% else %}Documents available to you{% endif %}</h2>
+{% if docs %}<div class="tablewrap"><table><tr><th>Name</th><th>Owner</th><th>Category</th><th>Created</th><th></th></tr>
+{% for d in docs %}<tr><td>{{ d.original_name }}</td><td>{{ d.owner_name }}</td><td>{{ d.category }}</td><td>{{ d.created_at[:10] }}</td><td>{% if me.role != 'admin' or d.owner_id == me.id %}<a href="{{ url_for('document_detail',doc_id=d.id) }}">Open</a>{% else %}<span class="muted">Metadata only</span>{% endif %}</td></tr>{% endfor %}</table></div>{% else %}<p>No documents yet.</p>{% endif %}</section>
+{% if me.role == 'admin' %}<section class="panel"><h2>Audit integrity</h2><p class="{{ 'good' if chain_ok else 'bad' }}">{{ 'Hash chain verified' if chain_ok else 'WARNING: audit chain verification failed' }}</p>
+<h2>Recent activity</h2><div class="tablewrap"><table><tr><th>Time</th><th>User</th><th>Action</th><th>Document ID</th><th>Details</th></tr>{% for l in logs %}<tr><td>{{ l.created_at }}</td><td>{{ l.username or 'Unknown' }}</td><td>{{ l.action }}</td><td>{{ l.document_id or '-' }}</td><td>{{ l.details }}</td></tr>{% endfor %}</table></div></section>{% endif %}
+{% endblock %}

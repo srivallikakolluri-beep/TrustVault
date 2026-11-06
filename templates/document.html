@@ -1,0 +1,9 @@
+{% extends "base.html" %}{% block content %}<section class="panel"><a href="{{ url_for('dashboard') }}">← Dashboard</a><h1>{{ doc.original_name }}</h1>
+<p>Owner: {{ doc.owner_name }} · Category: {{ doc.category }} · Size: {{ doc.size }} bytes</p><p>SHA-256: <code>{{ doc.sha256 }}</code></p>
+<p><a class="button primary" href="{{ url_for('download',doc_id=doc.id) }}">Download</a></p>
+{% if can_edit %}<h2>Replace document</h2><form method="post" action="{{ url_for('replace_document',doc_id=doc.id) }}" enctype="multipart/form-data"><input type="hidden" name="_csrf" value="{{ csrf_token() }}"><input type="file" name="file" required><button>Replace</button></form>{% endif %}
+{% if is_owner %}<hr><h2>Grant access</h2><form method="post" action="{{ url_for('grant',doc_id=doc.id) }}"><input type="hidden" name="_csrf" value="{{ csrf_token() }}">
+<label>User</label><select name="user_id" required>{% for u in users %}<option value="{{ u.id }}">{{ u.username }} ({{ u.role }})</option>{% endfor %}</select>
+<label>Permission</label><select name="permission"><option value="read">Read</option><option value="edit">Edit</option></select><button class="primary">Save permission</button></form>
+<h2>Current permissions</h2>{% if grants %}<table><tr><th>User</th><th>Permission</th><th></th></tr>{% for g in grants %}<tr><td>{{ g.username }}</td><td>{{ g.permission }}</td><td><form method="post" action="{{ url_for('revoke',doc_id=doc.id,target_id=g.user_id) }}"><input type="hidden" name="_csrf" value="{{ csrf_token() }}"><button class="danger">Revoke</button></form></td></tr>{% endfor %}</table>{% else %}<p>No additional access granted.</p>{% endif %}
+<h2>Delete document</h2><form method="post" action="{{ url_for('delete_document',doc_id=doc.id) }}" onsubmit="return confirm('Delete this document?')"><input type="hidden" name="_csrf" value="{{ csrf_token() }}"><button class="danger">Delete permanently</button></form>{% endif %}</section>{% endblock %}
