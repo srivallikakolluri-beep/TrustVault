@@ -123,3 +123,7 @@ trustvault/
 ├── static/
 └── tests/
 ```
+
+## Demo Video
+
+[Watch TrustVault Demo](https://github.com/srivallikakolluri-beep/TrustVault/raw/refs/heads/master/TrustVault_Demo.mp4)
