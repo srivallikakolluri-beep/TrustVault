@@ -24,19 +24,18 @@ A Flask + SQLite starter implementation of the supplied RISE challenge. It focus
 ## Run locally
  Python 3.10+ is recommended.
 
-1.Create virtual environment
-```python -m venv .venv
+```1.Create virtual environment
+python -m venv .venv
 ```
-2.Activate the environment
-```##Windows:
+```2.Activate the environment
+##Windows:
 .venv\Scripts\activate
 ```
-
 ```# macOS/Linux:
 source .venv/bin/activate
 ```
-3. Install dependencies
-```pip install -r requirements.txt
+```3. Install dependencies
+pip install -r requirements.txt
 ```
 
 Set a strong secret before running (do not use the development fallback in deployment).
