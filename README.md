@@ -25,7 +25,7 @@ A Flask + SQLite starter implementation of the supplied RISE challenge. It focus
 
 Python 3.10+ is recommended.
 
-**1.** **Create virtual environment**
+**1. Create virtual environment**
 
 ```bash
 python -m venv .venv
@@ -34,13 +34,11 @@ python -m venv .venv
 **2. Activate the environment**
 
 Windows:
-
 ```powershell
 .venv\Scripts\activate
 ```
 
 macOS/Linux:
-
 ```bash
 source .venv/bin/activate
 ```
@@ -54,20 +52,19 @@ pip install -r requirements.txt
 **4. Set a strong secret before running**
 
 macOS/Linux:
-
 ```bash
 export SECRET_KEY="$(python -c 'import secrets; print(secrets.token_hex(32))')"
 python app.py
 ```
 
 Windows PowerShell:
-
 ```powershell
 $env:SECRET_KEY = "replace-with-a-long-random-secret"
 python app.py
 ```
 
 Open [http://127.0.0.1:5000](http://127.0.0.1:5000)
+
 
 
 ## Demo accounts (fresh database only)
