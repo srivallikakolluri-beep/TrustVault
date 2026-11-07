@@ -77,9 +77,9 @@ Open [http://127.0.0.1:5000](http://127.0.0.1:5000)
 Change these passwords or remove demo users before any real deployment. Do not expose the development server to the public internet.
 
 ## Run tests
-</> Bash
-python -m pytest -q
-
+ ` ``` Bash `
+ `python -m pytest -q `
+ ` ``` `
 
 The tests cover unauthorized access, grant/revoke behavior, viewer upload denial, CSRF and audit-chain verification. Run them in your environment and review the output; passing tests are not a guarantee of security.
 
