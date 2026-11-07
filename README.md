@@ -33,12 +33,12 @@ python -m venv .venv
 
 **2. Activate the environment**
 
-Windows:
+```Windows:
 ```powershell
 .venv\Scripts\activate
 ```
 
-macOS/Linux:
+```macOS/Linux:
 ```bash
 source .venv/bin/activate
 ```
