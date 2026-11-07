@@ -20,7 +20,7 @@ A Flask + SQLite starter implementation of the supplied RISE challenge. It focus
  Live URL: https://srivallikakolluri.pythonanywhere.com
 
  The application is deployed on PythonAnywhere.
-
+ 
 ## Run locally
 
 Python 3.10+ is recommended.
@@ -33,12 +33,14 @@ python -m venv .venv
 
 **2. Activate the environment**
 
-```Windows:
+Windows:
+
 ```powershell
 .venv\Scripts\activate
 ```
 
-```macOS/Linux:
+macOS/Linux:
+
 ```bash
 source .venv/bin/activate
 ```
@@ -52,12 +54,14 @@ pip install -r requirements.txt
 **4. Set a strong secret before running**
 
 macOS/Linux:
+
 ```bash
 export SECRET_KEY="$(python -c 'import secrets; print(secrets.token_hex(32))')"
 python app.py
 ```
 
 Windows PowerShell:
+
 ```powershell
 $env:SECRET_KEY = "replace-with-a-long-random-secret"
 python app.py
@@ -77,9 +81,9 @@ Open [http://127.0.0.1:5000](http://127.0.0.1:5000)
 Change these passwords or remove demo users before any real deployment. Do not expose the development server to the public internet.
 
 ## Run tests
-```bash
+
 python -m pytest -q
-```
+
 
 The tests cover unauthorized access, grant/revoke behavior, viewer upload denial, CSRF and audit-chain verification. Run them in your environment and review the output; passing tests are not a guarantee of security.
 
