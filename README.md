@@ -22,37 +22,53 @@ A Flask + SQLite starter implementation of the supplied RISE challenge. It focus
  The application is deployed on PythonAnywhere.
 
 ## Run locally
- Python 3.10+ is recommended.
 
-```1.Create virtual environment
+Python 3.10+ is recommended.
+
+**1.** **Create virtual environment**
+
+```bash
 python -m venv .venv
 ```
-```2.Activate the environment
-##Windows:
+
+**2. Activate the environment**
+
+Windows:
+
+```powershell
 .venv\Scripts\activate
 ```
-```# macOS/Linux:
+
+macOS/Linux:
+
+```bash
 source .venv/bin/activate
 ```
-```3. Install dependencies
+
+**3. Install dependencies**
+
+```bash
 pip install -r requirements.txt
 ```
 
-Set a strong secret before running (do not use the development fallback in deployment).
+**4. Set a strong secret before running**
+
+macOS/Linux:
 
 ```bash
-# macOS/Linux
 export SECRET_KEY="$(python -c 'import secrets; print(secrets.token_hex(32))')"
 python app.py
 ```
 
 Windows PowerShell:
+
 ```powershell
 $env:SECRET_KEY = "replace-with-a-long-random-secret"
 python app.py
 ```
 
-Open http://127.0.0.1:5000
+Open [http://127.0.0.1:5000](http://127.0.0.1:5000)
+
 
 ## Demo accounts (fresh database only)
 | Role | Username | Password |
