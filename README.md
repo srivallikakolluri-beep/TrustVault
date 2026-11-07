@@ -15,6 +15,16 @@ A Flask + SQLite starter implementation of the supplied RISE challenge. It focus
 - Search by document name, owner, category and date.
 - Pytest security tests.
 
+## Demo Accounts
+
+Demo accounts are provided for evaluation.
+
+- Admin: Available for administration.
+- Owner: Demo owner account.
+- Viewer: Demo viewer account.
+
+Please register a new account if needed.
+
 ## Live Demo
 
  Live URL: https://srivallikakolluri.pythonanywhere.com
